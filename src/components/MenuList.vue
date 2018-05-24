@@ -1,45 +1,43 @@
 <template>
   <ul class="menu-list">
-    <li>
-      <img
-        src="../assets/icons/transaction.svg"
-        alt="">
-      <span>Fazer nova transação</span>
-    </li>
-    <li>
-      <img
-        src="../assets/icons/card.svg"
-        alt="">
-      <span>Fazer simulação</span>
-    </li>
+    <menu-list-item
+      v-for="(item, index) in items"
+      :key="index"
+      :icon="item.icon"
+      :label="item.label"/>
   </ul>
 </template>
 
 <script>
+import MenuListItem from './MenuListItem';
+import transactionIcon from '../assets/icons/transaction.svg';
+import cardIcon from '../assets/icons/card.svg';
+
 export default {
-  name: 'MenuList'
+  name: 'MenuList',
+  components: {
+    MenuListItem
+  },
+  data() {
+    return {
+      items: [
+        {
+          icon: transactionIcon,
+          label: 'Fazer nova transação'
+        },
+        {
+          icon: cardIcon,
+          label: 'Fazer simulação'
+        }
+      ]
+    };
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .menu-list {
   font-size: 14px;
-
-  li {
-    text-align: left;
-    background-color: #242a35;
-    margin-bottom: 2px;
-    height: 53px;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    cursor: pointer;
-
-    img {
-      margin-right: 10px;
-    }
-
-  }
 }
 </style>
 
