@@ -9,7 +9,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'MenuBar'
+};
 </script>
 
 <style lang="scss">
