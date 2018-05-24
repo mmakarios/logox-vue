@@ -1,0 +1,20 @@
+.menu-bar {
+  background-color: #343a40;
+  max-width: 260px;
+  height: 100vh;
+
+  .menu-header {
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      cursor: pointer;
+    }
+  }
+}
