@@ -22,6 +22,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './MenuList.scss'
+.menu-list {
+  font-size: 14px;
+
+  li {
+    text-align: left;
+    background-color: #242a35;
+    margin-bottom: 2px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    img {
+      margin-right: 10px;
+    }
+
+  }
+}
 </style>
 

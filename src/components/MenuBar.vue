@@ -26,5 +26,25 @@ export default {
 </script>
 
 <style lang="scss">
-@import './MenuBar.scss';
+.menu-bar {
+  background-color: #343a40;
+  max-width: 260px;
+  height: 100vh;
+  color: #fff;
+
+  .menu-header {
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      cursor: pointer;
+    }
+  }
+}
 </style>
