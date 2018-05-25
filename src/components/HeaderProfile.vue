@@ -9,11 +9,7 @@
         alt="">
     </div>
 
-    <div class="profile-icon">
-      <img
-        src="../assets/icons/profile.svg"
-        alt="profile">
-    </div>
+    <profile-photo/>
 
     <div class="notifications">
       <img
@@ -27,8 +23,13 @@
 </template>
 
 <script>
+import ProfilePhoto from './ProfilePhoto';
+
 export default {
-  name: 'HeaderProfile'
+  name: 'HeaderProfile',
+  components: {
+    ProfilePhoto
+  }
 };
 </script>
 
@@ -52,16 +53,6 @@ export default {
     }
   }
 
-  .profile-icon {
-    display: flex;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    background-color: rgba(3, 133, 219, 0.22);
-    border-radius: 50%;
-    margin-right: 25px;
-    cursor: pointer;
-  }
   .notifications {
     position: relative;
     cursor: pointer;
