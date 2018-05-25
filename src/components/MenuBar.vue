@@ -15,12 +15,12 @@
 </template>
 
 <script>
-import MenuList from './MenuList'
+import MenuList from './MenuList';
 
 export default {
   name: 'MenuBar',
   components: {
-    MenuList,
+    MenuList
   }
 };
 </script>
@@ -28,7 +28,7 @@ export default {
 <style lang="scss">
 .menu-bar {
   background-color: #343a40;
-  max-width: 260px;
+  width: 260px;
   height: 100vh;
   color: #fff;
 

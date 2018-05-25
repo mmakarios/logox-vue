@@ -11,10 +11,16 @@
 #app {
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  display: flex;
 
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+
+  .content {
+    flex: 1;
+    background-color: #f5f5f5;
   }
 }
