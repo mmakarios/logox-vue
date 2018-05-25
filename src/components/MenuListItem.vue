@@ -34,6 +34,12 @@ export default {
   padding: 10px 20px;
   cursor: pointer;
 
+  &.active {
+    background-color: #fff;
+    color: #242a35;
+    border-left: 5px solid #0385db;
+  }
+
   img {
     margin-right: 10px;
   }

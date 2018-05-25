@@ -2,6 +2,7 @@
   <ul class="menu-list">
     <menu-list-item
       v-for="(item, index) in items"
+      :class="{active: item.active}"
       :key="index"
       :icon="item.icon"
       :label="item.label"/>
@@ -12,6 +13,9 @@
 import MenuListItem from './MenuListItem';
 import transactionIcon from '../assets/icons/transaction.svg';
 import cardIcon from '../assets/icons/card.svg';
+import monitorIcon from '../assets/icons/monitor.svg';
+import fingerprintIcon from '../assets/icons/fingerprint_black.svg';
+import gearIcon from '../assets/icons/gear.svg';
 
 export default {
   name: 'MenuList',
@@ -28,6 +32,19 @@ export default {
         {
           icon: cardIcon,
           label: 'Fazer simulação'
+        },
+        {
+          icon: monitorIcon,
+          label: 'Painel do cliente'
+        },
+        {
+          icon: fingerprintIcon,
+          label: 'Meus dados cadastrais',
+          active: true
+        },
+        {
+          icon: gearIcon,
+          label: 'Configurações'
         }
       ]
     };
