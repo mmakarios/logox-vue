@@ -44,6 +44,7 @@ export default {
     width: 75%;
     margin: 0 auto 20px;
     font-size: 18px;
+    cursor: pointer;
 
     &:last-of-type {
       margin-bottom: 0;
