@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       options: [
-        { icon: personIcon, label: 'Minha conta listo' },
+        { icon: personIcon, label: 'Minha conta' },
         { icon: bankIcon, label: 'Domicílio bancário' },
         { icon: editIcon, label: 'Editar cadastro' },
         { icon: keyIcon, label: 'Alterar senha' },
