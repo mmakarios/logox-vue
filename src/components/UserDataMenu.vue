@@ -3,16 +3,20 @@
     <user-data-info/>
 
     <div class="divider"/>
+
+    <user-data-options/>
   </div>
 </template>
 
 <script>
 import UserDataInfo from './UserDataInfo';
+import UserDataOptions from './UserDataOptions';
 
 export default {
   name: 'UserDataMenu',
   components: {
-    UserDataInfo
+    UserDataInfo,
+    UserDataOptions
   }
 };
 </script>
@@ -23,14 +27,14 @@ export default {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 40px 0;
+  padding: 40px;
   line-height: 2em;
 
   .divider {
-    width: 100%;
+    width: calc(100% + 80px);
     height: 1px;
     background-color: #ebebf2;
-    margin: 15px 0;
+    margin: 15px -40px;
   }
 }
 </style>
