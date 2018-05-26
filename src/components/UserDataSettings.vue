@@ -8,14 +8,20 @@
       <span>Editar foto</span>
     </div>
     <div class="selected-content">
-      <div>Minha conta</div>
+      <h1>Minha conta</h1>
+      <base-input label="Nome"/>
     </div>
   </div>
 </template>
 
 <script>
+import BaseInput from './BaseInput';
+
 export default {
-  name: 'UserDataSettings'
+  name: 'UserDataSettings',
+  components: {
+    BaseInput
+  }
 };
 </script>
 
@@ -43,6 +49,10 @@ export default {
 
   .selected-content {
     padding: 40px;
+
+    h1 {
+      margin: 0;
+    }
   }
 }
 </style>
