@@ -29,7 +29,7 @@ export default {
 .menu-bar {
   background-color: #343a40;
   width: 260px;
-  height: 100vh;
+  min-height: 100vh;
   color: #fff;
 
   .menu-header {
