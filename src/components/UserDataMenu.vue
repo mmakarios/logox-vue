@@ -1,16 +1,18 @@
 <template>
   <div class="user-data-menu">
-    <profile-photo large/>
+    <user-data-info/>
+
+    <div class="divider"/>
   </div>
 </template>
 
 <script>
-import ProfilePhoto from './ProfilePhoto';
+import UserDataInfo from './UserDataInfo';
 
 export default {
   name: 'UserDataMenu',
   components: {
-    ProfilePhoto
+    UserDataInfo
   }
 };
 </script>
@@ -21,6 +23,14 @@ export default {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 40px 0;
+  line-height: 2em;
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ebebf2;
+    margin: 15px 0;
+  }
 }
 </style>

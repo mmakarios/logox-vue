@@ -32,6 +32,7 @@ export default {
   &.large {
     width: 200px;
     height: 200px;
+    margin-right: 0;
     img {
       width: 120px;
     }

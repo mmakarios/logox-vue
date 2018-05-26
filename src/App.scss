@@ -8,10 +8,7 @@
   box-sizing: border-box;
 }
 
-#app {
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-
+body {
   h1 {
     font-size: 30px;
     font-weight: normal;
@@ -22,6 +19,11 @@
     padding: 0;
     margin: 0;
   }
+}
+
+#app {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
 
   .content {
     flex: 1;
