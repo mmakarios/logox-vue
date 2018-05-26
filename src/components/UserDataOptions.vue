@@ -45,6 +45,10 @@ export default {
     margin: 0 auto 20px;
     font-size: 18px;
 
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
     img {
       width: 40px;
       margin-right: 30px;
