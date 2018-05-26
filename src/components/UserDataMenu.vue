@@ -5,18 +5,24 @@
     <div class="divider"/>
 
     <user-data-options/>
+
+    <div class="divider"/>
+
+    <user-data-contact/>
   </div>
 </template>
 
 <script>
 import UserDataInfo from './UserDataInfo';
 import UserDataOptions from './UserDataOptions';
+import UserDataContact from './UserDataContact';
 
 export default {
   name: 'UserDataMenu',
   components: {
     UserDataInfo,
-    UserDataOptions
+    UserDataOptions,
+    UserDataContact
   }
 };
 </script>
