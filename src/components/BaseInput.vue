@@ -48,6 +48,10 @@ export default {
     padding: 20px 25px 15px;
     font-size: 14px;
 
+    &:hover {
+      border-color: #0385db;
+    }
+
     &::-webkit-input-placeholder {
       color: #999999;
     }
