@@ -61,6 +61,7 @@ export default {
 
   .selected-content {
     padding: 40px;
+    border-top: 1px solid #ebebf2;
 
     h1 {
       margin: 0;
