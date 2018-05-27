@@ -70,7 +70,7 @@ export default {
     top: 6px;
 
     &:checked {
-      background-color: #0385db;
+      border: 10px solid #0385db;
     }
   }
 }

@@ -79,6 +79,13 @@
           type="tel"
         />
       </div>
+
+      <div class="actions">
+        <base-input-checkbox
+          label="Li e aceito os termos e condições de contrato."
+          name="terms"/>
+
+      </div>
     </div>
   </div>
 </template>
@@ -86,12 +93,14 @@
 <script>
 import BaseInput from './BaseInput';
 import BaseInputRadioGroup from './BaseInputRadioGroup';
+import BaseInputCheckbox from './BaseInputCheckbox';
 
 export default {
   name: 'UserDataSettings',
   components: {
     BaseInput,
-    BaseInputRadioGroup
+    BaseInputRadioGroup,
+    BaseInputCheckbox
   }
 };
 </script>
@@ -100,6 +109,8 @@ export default {
 .user-data-settings {
   background-color: #fff;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 
   .tabs {
     display: flex;
@@ -117,48 +128,56 @@ export default {
       }
     }
   }
+}
 
-  .selected-content {
-    padding: 40px;
-    border-top: 1px solid #ebebf2;
+.selected-content {
+  padding: 40px;
+  border-top: 1px solid #ebebf2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 
-    h1 {
-      margin: 0;
+  h1 {
+    margin: 0;
+  }
+
+  .input-section {
+    display: flex;
+
+    &.contact {
+      justify-content: space-between;
+      max-width: calc(834px + 6%); //899
+      > div {
+        max-width: 290px;
+        &:not(:last-of-type) {
+          margin-right: 3%;
+        }
+      }
     }
 
-    .input-section {
+    > .column {
+      max-width: 417px;
+      flex: 1;
+      margin-right: 6%;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
 
-      &.contact {
-        justify-content: space-between;
-        max-width: calc(834px + 6%); //899
-        > div {
-          max-width: 290px;
-          &:not(:last-of-type) {
-            margin-right: 3%;
-          }
-        }
-      }
-
-      > .column {
-        max-width: 417px;
-        flex: 1;
-        margin-right: 6%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        &:last-of-type {
-          margin-right: 0;
-        }
+      &:last-of-type {
+        margin-right: 0;
       }
     }
-    .divider {
-      height: 1px;
-      width: calc(100% + 80px);
-      margin: 30px -40px;
-      background-color: #ebebf2;
-    }
+  }
+
+  .divider {
+    height: 1px;
+    width: calc(100% + 80px);
+    margin: 30px -40px;
+    background-color: #ebebf2;
+  }
+
+  .actions {
+    margin-top: auto;
   }
 }
 </style>
