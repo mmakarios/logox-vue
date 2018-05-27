@@ -5,7 +5,7 @@
 
       <input
         :placeholder="placeholder"
-        type="text"
+        :type="type"
         name="name">
     </label>
   </div>
@@ -22,6 +22,10 @@ export default {
     placeholder: {
       type: String,
       default: ''
+    },
+    type: {
+      type: String,
+      default: 'text'
     }
   }
 };

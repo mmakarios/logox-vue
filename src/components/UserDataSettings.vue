@@ -9,6 +9,7 @@
     </div>
     <div class="selected-content">
       <h1>Minha conta</h1>
+
       <div class="input-section">
         <div class="column">
           <base-input
@@ -24,7 +25,9 @@
             placeholder="Digite o nome fantasia"/>
         </div>
       </div>
+
       <div class="divider"/>
+
       <div class="input-section">
         <div class="column">
           <base-input
@@ -55,28 +58,21 @@
             placeholder="UF"
             class="one-third"
           />
-
         </div>
       </div>
+
       <div class="divider"/>
+
       <div class="input-section contact">
         <base-input
-          label="Telefone 1"
+          v-for="index in 3"
+          :key="index"
+          :label="'Telefone ' + index"
           placeholder="( 99 ) 99999-9999"
           class="one-third"
-        />
-        <base-input
-          label="Telefone 2"
-          placeholder="( 99 ) 99999-9999"
-          class="one-third"
-        />
-        <base-input
-          label="Telefone 3"
-          placeholder="( 99 ) 99999-9999"
-          class="one-third"
+          type="tel"
         />
       </div>
-
     </div>
   </div>
 </template>
