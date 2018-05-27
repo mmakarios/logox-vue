@@ -25,6 +25,30 @@
         </div>
       </div>
       <div class="divider"/>
+      <div class="input-section">
+        <div>
+          <base-input
+            label="Cep"
+            placeholder="Digite seu cep"/>
+          <base-input
+            label="Complemento"
+            placeholder="Digite o complemento"/>
+        </div>
+        <div class="two-columns">
+
+          <base-input
+            label="Endereço"
+            placeholder="Digite o seu endereço"
+            class="medium"
+          />
+          <base-input
+            label="Número"
+            placeholder="Número"
+            class="small"
+          />
+
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -77,6 +101,9 @@ export default {
         max-width: 417px;
         flex: 1;
         margin-right: 6%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
       }
     }
     .divider {

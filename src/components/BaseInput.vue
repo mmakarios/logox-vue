@@ -26,6 +26,16 @@ export default {
 
 <style lang="scss" scoped>
 .base-input {
+  width: 100%;
+
+  &.medium {
+    width: 63%;
+  }
+
+  &.small {
+    width: 33%;
+  }
+
   .label {
     font-size: 18px;
     margin: 15px 0;
