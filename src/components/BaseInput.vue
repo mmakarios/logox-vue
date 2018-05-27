@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="base-input">
     <div class="label">{{ label }}</div>
     <input
+      :placeholder="placeholder"
       type="text"
-      name="name"
-      placeholder="Digite seu nome">
+      name="name">
   </div>
 </template>
 
@@ -15,19 +15,28 @@ export default {
     label: {
       type: String,
       required: true
+    },
+    placeholder: {
+      type: String,
+      default: ''
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.base-input {
+  max-width: 417px;
+  width: 40%;
+  margin-right: 6%;
+}
 .label {
   font-size: 18px;
   margin: 15px 0;
 }
 
 input {
-  max-width: 417px;
+  width: 100%;
   border: 1px solid rgba(191, 191, 191, 0.5);
   border-radius: 4px;
   padding: 20px 25px 15px;

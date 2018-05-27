@@ -9,7 +9,19 @@
     </div>
     <div class="selected-content">
       <h1>Minha conta</h1>
-      <base-input label="Nome"/>
+      <div class="input-section">
+
+        <base-input
+          label="Nome"
+          placeholder="Digite seu nome"/>
+        <base-input
+          label="Nome Fantasia"
+          placeholder="Digite o nome fantasia"/>
+        <base-input
+          label="Segmento"
+          placeholder="Escolha o segmento"/>
+      </div>
+      <div class="divider"/>
     </div>
   </div>
 </template>
@@ -52,6 +64,17 @@ export default {
 
     h1 {
       margin: 0;
+    }
+
+    .input-section {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .divider {
+      height: 1px;
+      width: calc(100% + 80px);
+      margin: 40px -40px;
+      background-color: #ebebf2;
     }
   }
 }
