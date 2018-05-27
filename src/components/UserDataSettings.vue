@@ -10,7 +10,7 @@
     <div class="selected-content">
       <h1>Minha conta</h1>
       <div class="input-section">
-        <div>
+        <div class="column">
           <base-input
             label="Nome"
             placeholder="Digite seu nome"/>
@@ -18,7 +18,7 @@
             label="Segmento"
             placeholder="Escolha o segmento"/>
         </div>
-        <div>
+        <div class="column">
           <base-input
             label="Nome Fantasia"
             placeholder="Digite o nome fantasia"/>
@@ -26,7 +26,7 @@
       </div>
       <div class="divider"/>
       <div class="input-section">
-        <div>
+        <div class="column">
           <base-input
             label="Cep"
             placeholder="Digite seu cep"/>
@@ -34,21 +34,49 @@
             label="Complemento"
             placeholder="Digite o complemento"/>
         </div>
-        <div class="two-columns">
-
+        <div class="column">
           <base-input
             label="Endereço"
             placeholder="Digite o seu endereço"
-            class="medium"
+            class="two-thirds"
           />
           <base-input
             label="Número"
             placeholder="Número"
-            class="small"
+            class="one-third"
+          />
+          <base-input
+            label="Cidade"
+            placeholder="Digite a sua cidade"
+            class="two-thirds"
+          />
+          <base-input
+            label="UF"
+            placeholder="UF"
+            class="one-third"
           />
 
         </div>
       </div>
+      <div class="divider"/>
+      <div class="input-section contact">
+        <base-input
+          label="Telefone 1"
+          placeholder="( 99 ) 99999-9999"
+          class="one-third"
+        />
+        <base-input
+          label="Telefone 2"
+          placeholder="( 99 ) 99999-9999"
+          class="one-third"
+        />
+        <base-input
+          label="Telefone 3"
+          placeholder="( 99 ) 99999-9999"
+          class="one-third"
+        />
+      </div>
+
     </div>
   </div>
 </template>
@@ -97,13 +125,28 @@ export default {
     .input-section {
       display: flex;
 
-      > div {
+      &.contact {
+        justify-content: space-between;
+        max-width: calc(834px + 6%); //899
+        > div {
+          max-width: 290px;
+          &:not(:last-of-type) {
+            margin-right: 3%;
+          }
+        }
+      }
+
+      > .column {
         max-width: 417px;
         flex: 1;
         margin-right: 6%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
       }
     }
     .divider {

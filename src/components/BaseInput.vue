@@ -28,11 +28,11 @@ export default {
 .base-input {
   width: 100%;
 
-  &.medium {
+  &.two-thirds {
     width: 63%;
   }
 
-  &.small {
+  &.one-third {
     width: 33%;
   }
 
