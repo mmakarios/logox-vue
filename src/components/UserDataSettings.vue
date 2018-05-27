@@ -23,6 +23,12 @@
           <base-input
             label="Nome Fantasia"
             placeholder="Digite o nome fantasia"/>
+          <base-input-radio-group
+            :values="['male','female']"
+            :labels="['Masculino','Feminino']"
+            name="gender"
+            legend="Gênero"
+          />
         </div>
       </div>
 
@@ -79,11 +85,13 @@
 
 <script>
 import BaseInput from './BaseInput';
+import BaseInputRadioGroup from './BaseInputRadioGroup';
 
 export default {
   name: 'UserDataSettings',
   components: {
-    BaseInput
+    BaseInput,
+    BaseInputRadioGroup
   }
 };
 </script>
