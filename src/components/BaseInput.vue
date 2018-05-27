@@ -1,10 +1,13 @@
 <template>
   <div class="base-input">
-    <div class="label">{{ label }}</div>
-    <input
-      :placeholder="placeholder"
-      type="text"
-      name="name">
+    <label>
+      {{ label }}
+
+      <input
+        :placeholder="placeholder"
+        type="text"
+        name="name">
+    </label>
   </div>
 </template>
 
@@ -27,6 +30,7 @@ export default {
 <style lang="scss" scoped>
 .base-input {
   width: 100%;
+  margin: 10px 0;
 
   &.two-thirds {
     width: 63%;
@@ -36,12 +40,12 @@ export default {
     width: 33%;
   }
 
-  .label {
+  label {
     font-size: 18px;
-    margin: 15px 0;
   }
 
   input {
+    margin-top: 12px;
     width: 100%;
     border: 1px solid rgba(191, 191, 191, 0.5);
     border-radius: 4px;

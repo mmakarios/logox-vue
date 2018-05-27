@@ -152,7 +152,7 @@ export default {
     .divider {
       height: 1px;
       width: calc(100% + 80px);
-      margin: 40px -40px;
+      margin: 30px -40px;
       background-color: #ebebf2;
     }
   }
