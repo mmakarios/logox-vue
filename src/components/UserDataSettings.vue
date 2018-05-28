@@ -120,6 +120,7 @@ export default {
   flex: 1;
   display: flex;
   flex-direction: column;
+  box-shadow: $drop-shadow;
 
   .tabs {
     display: flex;
@@ -155,7 +156,7 @@ export default {
 
     &.contact {
       justify-content: space-between;
-      max-width: calc(834px + 6%); //899
+      max-width: calc(834px + 6%);
       > div {
         max-width: 290px;
         &:not(:last-of-type) {
