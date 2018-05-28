@@ -90,6 +90,8 @@
           <span>Imprimir</span>
         </span>
 
+        <base-button>Salvar</base-button>
+
       </div>
     </div>
   </div>
@@ -99,13 +101,15 @@
 import BaseInput from './BaseInput';
 import BaseInputRadioGroup from './BaseInputRadioGroup';
 import BaseInputCheckbox from './BaseInputCheckbox';
+import BaseButton from './BaseButton';
 
 export default {
   name: 'UserDataSettings',
   components: {
     BaseInput,
     BaseInputRadioGroup,
-    BaseInputCheckbox
+    BaseInputCheckbox,
+    BaseButton
   }
 };
 </script>
@@ -183,13 +187,20 @@ export default {
 
   .actions {
     margin-top: auto;
+    display: flex;
+    align-items: center;
+    max-width: 900px;
 
-    .print {
+    > span {
       display: inline-flex;
       align-items: center;
+    }
+
+    .print {
       color: #0385db;
       font-size: 20px;
       margin-left: 8.5px;
+      margin-right: auto;
 
       img {
         margin-right: 5px;
