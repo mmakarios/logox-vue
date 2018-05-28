@@ -35,6 +35,7 @@ export default {
   flex-direction: column;
   padding: 40px;
   line-height: 2em;
+  box-shadow: $drop-shadow;
 
   .divider {
     width: calc(100% + 80px);

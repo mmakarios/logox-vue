@@ -28,5 +28,6 @@ export default {
   padding: 15px 30px;
   align-items: center;
   justify-content: space-between;
+  box-shadow: $drop-shadow;
 }
 </style>
