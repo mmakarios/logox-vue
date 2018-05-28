@@ -85,6 +85,11 @@
           label="Li e aceito os termos e condições de contrato."
           name="terms"/>
 
+        <span class="print">
+          <img src="../assets/icons/print.svg">
+          <span>Imprimir</span>
+        </span>
+
       </div>
     </div>
   </div>
@@ -178,6 +183,18 @@ export default {
 
   .actions {
     margin-top: auto;
+
+    .print {
+      display: inline-flex;
+      align-items: center;
+      color: #0385db;
+      font-size: 20px;
+      margin-left: 8.5px;
+
+      img {
+        margin-right: 5px;
+      }
+    }
   }
 }
 </style>

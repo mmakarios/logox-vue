@@ -1,5 +1,5 @@
 <template>
-  <div class="base-input-checkbox">
+  <span class="base-input-checkbox">
     <label>
       <input
         :name="name"
@@ -7,7 +7,7 @@
 
       {{ label }}
     </label>
-  </div>
+  </span>
 </template>
 
 <script>
@@ -30,6 +30,8 @@ export default {
 .base-input-checkbox {
   label {
     font-size: 13px;
+    display: inline-flex;
+    align-items: center;
   }
   input {
     -webkit-appearance: none;
@@ -43,9 +45,6 @@ export default {
     transition: 0.1s all linear;
     outline: none;
     margin-right: 10px;
-
-    position: relative;
-    top: 6px;
 
     &:checked {
       background-color: #0385db;
