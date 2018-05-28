@@ -5,6 +5,9 @@
       <user-data-menu/>
       <user-data-settings/>
     </div>
+    <span class="copyright">
+      ® 2018 Logox Tecnologia S.A. Todos os direitos reservados.
+    </span>
   </div>
 </template>
 
@@ -31,6 +34,13 @@ export default {
     > div:not(:last-of-type) {
       margin-right: 35px;
     }
+  }
+
+  .copyright {
+    float: right;
+    margin: 40px 0;
+    color: #535353;
+    font-size: 14px;
   }
 }
 </style>
