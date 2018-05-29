@@ -26,7 +26,8 @@
             placeholder="Digite seu nome"/>
           <base-input
             label="Segmento"
-            placeholder="Escolha o segmento"/>
+            placeholder="Escolha o segmento"
+            dropdown/>
         </div>
         <div class="column">
           <base-input

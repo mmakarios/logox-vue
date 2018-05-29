@@ -6,7 +6,15 @@
       <input
         :placeholder="placeholder"
         :type="type"
+        :class="{dropdown}"
         name="name">
+      <span
+        v-if="dropdown"
+        class="dropdown-button">
+        <img
+          src="../assets/icons/arrow_down.svg"
+          alt="select">
+      </span>
     </label>
   </div>
 </template>
@@ -26,6 +34,10 @@ export default {
     type: {
       type: String,
       default: 'text'
+    },
+    dropdown: {
+      type: Boolean,
+      default: false
     }
   }
 };
@@ -35,6 +47,7 @@ export default {
 .base-input {
   width: 100%;
   margin: 10px 0;
+  position: relative;
 
   @include media('>phone') {
     &.two-thirds {
@@ -63,8 +76,25 @@ export default {
       padding-right: 15px;
     }
 
-    &:hover {
+    &:hover,
+    &.dropdown {
       border-color: #0385db;
+    }
+
+    &.dropdown {
+      cursor: pointer;
+      &::-webkit-input-placeholder {
+        color: #0385db;
+      }
+      &::-moz-placeholder {
+        color: #0385db;
+      }
+      &:-ms-input-placeholder {
+        color: #0385db;
+      }
+      &:-moz-placeholder {
+        color: #0385db;
+      }
     }
 
     &::-webkit-input-placeholder {
@@ -79,6 +109,12 @@ export default {
     &:-moz-placeholder {
       color: #999999;
     }
+  }
+
+  .dropdown-button {
+    position: absolute;
+    right: 20px;
+    top: 55%;
   }
 }
 </style>
