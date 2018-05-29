@@ -134,6 +134,10 @@ export default {
       font-size: 18px;
     }
 
+    @include media('<=md') {
+      font-size: 16px;
+    }
+
     > span {
       padding: 25px 0;
 

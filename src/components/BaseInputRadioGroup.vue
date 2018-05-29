@@ -4,13 +4,14 @@
 
     <span
       v-for="(value,index) in values"
-      :key="value">
+      :key="value"
+      class="base-radio">
       <input
         :name="name"
         :value="value"
         :id="'radio-' + name + '-' + value"
         type="radio">
-      <label>
+      <label :for="'radio-' + name + '-' + value">
         {{ labels[index] }}
       </label>
     </span>
@@ -44,6 +45,7 @@ export default {
 <style lang="scss" scoped>
 .base-input-radio-group {
   font-size: 20px;
+  flex: 1;
 
   @include media('<=lg') {
     font-size: 18px;
@@ -53,10 +55,17 @@ export default {
     font-size: 18px;
     margin-bottom: 25px;
   }
+  .base-radio {
+    display: inline-flex;
+    align-items: center;
+
+    &:not(:last-of-type) {
+      margin-right: 6%;
+    }
+  }
 
   label {
     color: #0385db;
-    margin-right: 6%;
   }
 
   input {
@@ -72,11 +81,10 @@ export default {
     outline: none;
     margin-right: 10px;
 
-    position: relative;
-    top: 6px;
+    flex-shrink: 0;
 
     &:checked {
-      border: 10px solid #0385db;
+      background-color: #0385db;
     }
   }
 }

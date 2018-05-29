@@ -28,6 +28,9 @@ export default {
 
 <style lang="scss" scoped>
 .base-input-checkbox {
+  @include media('<=md') {
+    max-width: 230px;
+  }
   label {
     font-size: 13px;
     display: inline-flex;
@@ -45,6 +48,8 @@ export default {
     transition: 0.1s all linear;
     outline: none;
     margin-right: 10px;
+
+    flex-shrink: 0;
 
     &:checked {
       background-color: #0385db;
