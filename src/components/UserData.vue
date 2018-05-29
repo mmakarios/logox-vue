@@ -39,7 +39,7 @@ export default {
   padding: 25px 35px;
 
   @include media('<=phone') {
-    padding: 20px 30px;
+    padding: 20px 30px 50px;
   }
 
   .card-mobile {
