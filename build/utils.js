@@ -61,7 +61,7 @@ exports.cssLoaders = function(options) {
     postcss: generateLoaders(),
     less: generateLoaders('less'),
     sass: generateLoaders('sass', { indentedSyntax: true }),
-    scss: generateLoaders('sass', { data: "@import '~@/variables';\n" }),
+    scss: generateLoaders('sass', { data: "@import '~@/resources';\n" }),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   };
