@@ -1,11 +1,20 @@
 <template>
   <div class="user-data-settings">
     <div class="tabs">
-      <span class="active">Minha conta</span>
-      <span>Domicílio bancário</span>
-      <span>Editar cadastro</span>
-      <span>Alterar senha</span>
-      <span>Editar foto</span>
+      <span class="scroll left"><img
+        src="../assets/icons/arrow_left.svg"
+        alt="scroll left"></span>
+      <div class="options">
+
+        <span class="active">Minha conta</span>
+        <span>Domicílio bancário</span>
+        <span>Editar cadastro</span>
+        <span>Alterar senha</span>
+        <span>Editar foto</span>
+      </div>
+      <span class="scroll right"><img
+        src="../assets/icons/arrow_right.svg"
+        alt="scroll right"></span>
     </div>
     <div class="selected-content">
       <h1>Minha conta</h1>
@@ -139,11 +148,34 @@ export default {
   }
 
   .tabs {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .scroll {
+      position: absolute;
+
+      @include media('>phone') {
+        display: none;
+      }
+
+      &.left {
+        left: -10px;
+      }
+
+      &.right {
+        right: -10px;
+      }
+    }
+  }
+
+  .options {
     display: flex;
     padding: 0 40px;
     max-width: 880px;
     justify-content: space-between;
     font-size: 20px;
+    flex: 1;
 
     @include media('<=lg') {
       padding: 0 30px;
@@ -160,14 +192,22 @@ export default {
 
     @include media('<=phone') {
       padding: 0;
+      margin: 0 20px;
+      font-size: 20px;
+      overflow: hidden;
+      white-space: nowrap;
     }
 
-    > span {
+    > span:not(.scroll) {
       padding: 25px 0;
 
       &.active {
         color: #0385db;
         border-bottom: 2px solid #0385db;
+      }
+
+      @include media('<=phone') {
+        margin-right: 30px;
       }
     }
   }
@@ -187,6 +227,7 @@ export default {
   @include media('<=phone') {
     padding-left: 0;
     padding-right: 0;
+    padding-top: 20px;
   }
 
   h1 {
