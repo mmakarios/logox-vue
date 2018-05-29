@@ -55,6 +55,10 @@ export default {
 <style lang="scss" scoped>
 .menu-list {
   font-size: 14px;
+
+  @include media('<=phone') {
+    display: none;
+  }
 }
 </style>
 

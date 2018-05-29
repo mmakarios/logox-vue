@@ -29,5 +29,9 @@ export default {
   align-items: center;
   justify-content: space-between;
   box-shadow: $drop-shadow;
+
+  @include media('<=phone') {
+    display: none;
+  }
 }
 </style>
