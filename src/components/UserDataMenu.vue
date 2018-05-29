@@ -6,7 +6,7 @@
 
     <user-data-options/>
 
-    <div class="divider"/>
+    <div class="divider desktop"/>
 
     <user-data-contact/>
   </div>
@@ -41,6 +41,10 @@ export default {
     padding: 30px;
   }
 
+  @include media('<=phone') {
+    box-shadow: none;
+  }
+
   .divider {
     width: calc(100% + 80px);
     height: 1px;
@@ -51,6 +55,10 @@ export default {
       width: calc(100% + 60px);
       margin-left: -30px;
       margin-right: -30px;
+    }
+
+    &.desktop {
+      display: none;
     }
   }
 }

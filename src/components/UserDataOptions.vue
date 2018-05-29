@@ -45,14 +45,21 @@ export default {
   padding: 30px 0;
 
   li {
-    display: flex;
-    align-items: center;
     width: 75%;
     margin: 0 auto 20px;
     font-size: 18px;
 
     &:last-of-type {
       margin-bottom: 0;
+    }
+
+    @include media('<=phone') {
+      width: 100%;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
     }
 
     img {
