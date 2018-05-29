@@ -201,6 +201,12 @@ export default {
     width: calc(100% + 80px);
     margin: 30px -40px;
     background-color: #ebebf2;
+
+    @include media('<=lg') {
+      width: calc(100% + 60px);
+      margin-left: -30px;
+      margin-right: -30px;
+    }
   }
 
   .actions {

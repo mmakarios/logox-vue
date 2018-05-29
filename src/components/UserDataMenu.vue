@@ -46,6 +46,12 @@ export default {
     height: 1px;
     background-color: #ebebf2;
     margin: 15px -40px;
+
+    @include media('<=sm') {
+      width: calc(100% + 60px);
+      margin-left: -30px;
+      margin-right: -30px;
+    }
   }
 }
 </style>
