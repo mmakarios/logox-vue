@@ -328,6 +328,10 @@ export default {
   }
 
   .actions-mobile {
+    @include media('>phone') {
+      display: none;
+    }
+
     > span {
       display: inline-flex;
       align-items: center;
