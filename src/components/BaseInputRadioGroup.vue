@@ -2,16 +2,18 @@
   <div class="base-input-radio-group">
     <div class="legend">{{ legend }}</div>
 
-    <label
-      v-for="(value, index) in values"
+    <span
+      v-for="(value,index) in values"
       :key="value">
       <input
         :name="name"
         :value="value"
+        :id="'radio-' + name + '-' + value"
         type="radio">
-
-      {{ labels[index] }}
-    </label>
+      <label>
+        {{ labels[index] }}
+      </label>
+    </span>
   </div>
 </template>
 
@@ -43,6 +45,10 @@ export default {
 .base-input-radio-group {
   font-size: 20px;
 
+  @include media('<=lg') {
+    font-size: 18px;
+  }
+
   .legend {
     font-size: 18px;
     margin-bottom: 25px;
@@ -50,7 +56,7 @@ export default {
 
   label {
     color: #0385db;
-    margin-right: 35px;
+    margin-right: 6%;
   }
 
   input {

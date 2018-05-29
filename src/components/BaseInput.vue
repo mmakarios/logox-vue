@@ -56,6 +56,11 @@ export default {
     padding: 20px 25px 15px;
     font-size: 14px;
 
+    @include media('<=lg') {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
     &:hover {
       border-color: #0385db;
     }

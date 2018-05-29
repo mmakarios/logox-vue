@@ -127,10 +127,15 @@ export default {
     padding: 0 40px;
     max-width: 880px;
     justify-content: space-between;
+    font-size: 20px;
+
+    @include media('<=lg') {
+      padding: 0 30px;
+      font-size: 18px;
+    }
 
     > span {
       padding: 25px 0;
-      font-size: 20px;
 
       &.active {
         color: #0385db;
@@ -146,6 +151,10 @@ export default {
   flex: 1;
   display: flex;
   flex-direction: column;
+
+  @include media('<=lg') {
+    padding: 40px 30px;
+  }
 
   h1 {
     margin: 0;
@@ -202,6 +211,13 @@ export default {
       font-size: 20px;
       margin-left: 8.5px;
       margin-right: auto;
+
+      @include media('<=lg') {
+        margin-left: auto;
+        span {
+          display: none;
+        }
+      }
 
       img {
         margin-right: 5px;

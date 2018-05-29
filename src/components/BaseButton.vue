@@ -26,6 +26,10 @@ export default {
     background-color: #0385db;
     text-transform: uppercase;
     font-size: 20px;
+
+    @include media('<=lg') {
+      width: 221px;
+    }
   }
 }
 </style>

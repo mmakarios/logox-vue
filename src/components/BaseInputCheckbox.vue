@@ -1,10 +1,10 @@
 <template>
   <span class="base-input-checkbox">
-    <label>
-      <input
-        :name="name"
-        type="checkbox">
-
+    <input
+      :name="name"
+      :id="name"
+      type="checkbox">
+    <label :for="name">
       {{ label }}
     </label>
   </span>
