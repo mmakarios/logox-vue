@@ -138,6 +138,10 @@ export default {
       font-size: 16px;
     }
 
+    @include media('<=sm') {
+      font-size: 14px;
+    }
+
     > span {
       padding: 25px 0;
 

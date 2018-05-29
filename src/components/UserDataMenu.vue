@@ -37,6 +37,10 @@ export default {
   line-height: 2em;
   box-shadow: $drop-shadow;
 
+  @include media('<=sm') {
+    padding: 30px;
+  }
+
   .divider {
     width: calc(100% + 80px);
     height: 1px;

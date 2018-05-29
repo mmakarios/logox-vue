@@ -51,6 +51,10 @@ export default {
     font-size: 18px;
   }
 
+  @include media('<=md') {
+    font-size: 16px;
+  }
+
   .legend {
     font-size: 18px;
     margin-bottom: 25px;
