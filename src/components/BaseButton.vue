@@ -30,6 +30,10 @@ export default {
     @include media('<=lg') {
       width: 221px;
     }
+
+    @include media('<=phone') {
+      width: 100%;
+    }
   }
 }
 </style>

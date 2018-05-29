@@ -55,6 +55,10 @@ export default {
     font-size: 16px;
   }
 
+  @include media('<=phone') {
+    font-size: 20px;
+  }
+
   .legend {
     font-size: 18px;
     margin-bottom: 25px;

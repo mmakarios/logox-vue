@@ -2,9 +2,9 @@
   <span class="base-input-checkbox">
     <input
       :name="name"
-      :id="name"
+      :id="'checkbox-'+ name"
       type="checkbox">
-    <label :for="name">
+    <label :for="'checkbox-'+ name">
       {{ label }}
     </label>
   </span>
@@ -31,6 +31,11 @@ export default {
   @include media('<=md') {
     max-width: 230px;
   }
+
+  @include media('<=phone') {
+    max-width: unset;
+  }
+
   label {
     font-size: 13px;
     display: inline-flex;
@@ -53,6 +58,10 @@ export default {
 
     &:checked {
       background-color: #0385db;
+    }
+
+    @include media('<=phone') {
+      margin-right: 6px;
     }
   }
 }

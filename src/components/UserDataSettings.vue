@@ -80,7 +80,7 @@
         />
       </div>
 
-      <div class="actions">
+      <div class="actions-desktop">
         <base-input-checkbox
           label="Li e aceito os termos e condições de contrato."
           name="terms"/>
@@ -91,8 +91,20 @@
         </span>
 
         <base-button>Salvar</base-button>
-
       </div>
+
+      <div class="actions-mobile">
+        <div class="divider"/>
+
+        <base-input-checkbox
+          label="Li e aceito os termos e condições de contrato."
+          name="terms"/>
+
+        <div class="divider"/>
+
+        <base-button>Salvar</base-button>
+      </div>
+
     </div>
   </div>
 </template>
@@ -122,6 +134,10 @@ export default {
   flex-direction: column;
   box-shadow: $drop-shadow;
 
+  @include media('<=phone') {
+    box-shadow: none;
+  }
+
   .tabs {
     display: flex;
     padding: 0 40px;
@@ -140,6 +156,10 @@ export default {
 
     @include media('<=sm') {
       font-size: 14px;
+    }
+
+    @include media('<=phone') {
+      padding: 0;
     }
 
     > span {
@@ -164,18 +184,36 @@ export default {
     padding: 40px 30px;
   }
 
+  @include media('<=phone') {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   h1 {
     margin: 0;
+
+    @include media('<=phone') {
+      display: none;
+    }
   }
 
   .input-section {
     display: flex;
+
+    @include media('<=phone') {
+      flex-direction: column;
+    }
 
     &.contact {
       justify-content: space-between;
       max-width: calc(834px + 6%);
       > div {
         max-width: 290px;
+
+        @include media('<=phone') {
+          max-width: unset;
+        }
+
         &:not(:last-of-type) {
           margin-right: 3%;
         }
@@ -191,6 +229,10 @@ export default {
       justify-content: space-between;
 
       &:last-of-type {
+        margin-right: 0;
+      }
+
+      @include media('<=phone') {
         margin-right: 0;
       }
     }
@@ -209,11 +251,15 @@ export default {
     }
   }
 
-  .actions {
+  .actions-desktop {
     margin-top: auto;
     display: flex;
     align-items: center;
     max-width: 900px;
+
+    @include media('<=phone') {
+      display: none;
+    }
 
     > span {
       display: inline-flex;
@@ -236,6 +282,14 @@ export default {
       img {
         margin-right: 5px;
       }
+    }
+  }
+
+  .actions-mobile {
+    > span {
+      display: inline-flex;
+      align-items: center;
+      width: 100%;
     }
   }
 }

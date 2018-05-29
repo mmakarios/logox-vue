@@ -36,12 +36,14 @@ export default {
   width: 100%;
   margin: 10px 0;
 
-  &.two-thirds {
-    width: 63%;
-  }
+  @include media('>phone') {
+    &.two-thirds {
+      width: 63%;
+    }
 
-  &.one-third {
-    width: 33%;
+    &.one-third {
+      width: 33%;
+    }
   }
 
   label {
