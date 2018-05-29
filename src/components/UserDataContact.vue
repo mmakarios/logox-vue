@@ -25,6 +25,10 @@ export default {
   align-items: center;
   font-size: 27px;
 
+  @include media('<=phone') {
+    display: none;
+  }
+
   .contact-title {
     display: flex;
     align-items: center;

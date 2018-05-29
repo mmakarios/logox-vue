@@ -30,5 +30,8 @@ ul {
   .content {
     flex: 1;
     background-color: #f5f5f5;
+    @include media('<=phone') {
+      background-color: #fff;
+    }
   }
 }

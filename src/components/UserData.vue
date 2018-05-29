@@ -41,6 +41,10 @@ export default {
     margin: 40px 0;
     color: #535353;
     font-size: 14px;
+
+    @include media('<=phone') {
+      display: none;
+    }
   }
 }
 </style>
