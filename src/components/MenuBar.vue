@@ -1,10 +1,14 @@
 <template>
   <div class="menu-bar">
     <div class="menu-header">
-      <img
-        src="../assets/icons/logox.svg"
-        alt="logox logo"
+      <VLink
+        href="/"
         class="logo">
+        <img
+          src="../assets/icons/logox.svg"
+          alt="logox logo"
+        >
+      </VLink>
       <img
         src="../assets/icons/menu.svg"
         alt="menu icon"
@@ -20,11 +24,13 @@
 
 <script>
 import MenuList from './MenuList';
+import VLink from './VLink';
 
 export default {
   name: 'MenuBar',
   components: {
-    MenuList
+    MenuList,
+    VLink
   }
 };
 </script>
@@ -54,11 +60,16 @@ export default {
     }
 
     .logo {
-      height: 20px;
       cursor: pointer;
       @include media('<=phone') {
         order: 2;
-        height: 16px;
+        img {
+          height: 16px;
+        }
+      }
+
+      img {
+        height: 20px;
       }
     }
 

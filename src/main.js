@@ -6,8 +6,15 @@ import App from './App';
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
-new Vue({
+const app = new Vue({
   el: '#app',
   components: { App },
+  data: {
+    currentRoute: window.location.pathname
+  },
   template: '<App/>'
+});
+
+window.addEventListener('popstate', () => {
+  app.currentRoute = window.location.pathname;
 });

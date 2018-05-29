@@ -3,10 +3,12 @@
     <li
       v-for="option in options"
       :key="option.icon">
-      <img
-        :src="option.icon"
-        alt="">
-      {{ option.label }}
+      <VLink :href="option.link">
+        <img
+          :src="option.icon"
+          alt="">
+        {{ option.label }}
+      </VLink>
     </li>
   </ul>
 </template>
@@ -17,17 +19,21 @@ import bankIcon from '../assets/icons/bank.svg';
 import editIcon from '../assets/icons/edit.svg';
 import keyIcon from '../assets/icons/key.svg';
 import cameraIcon from '../assets/icons/camera.svg';
+import VLink from './VLink';
 
 export default {
   name: 'UserDataOptions',
+  components: {
+    VLink
+  },
   data() {
     return {
       options: [
-        { icon: personIcon, label: 'Minha conta' },
-        { icon: bankIcon, label: 'Domicílio bancário' },
-        { icon: editIcon, label: 'Editar cadastro' },
-        { icon: keyIcon, label: 'Alterar senha' },
-        { icon: cameraIcon, label: 'Editar foto' }
+        { icon: personIcon, label: 'Minha conta', link: '/settings' },
+        { icon: bankIcon, label: 'Domicílio bancário', link: '/settings' },
+        { icon: editIcon, label: 'Editar cadastro', link: '/settings' },
+        { icon: keyIcon, label: 'Alterar senha', link: '/settings' },
+        { icon: cameraIcon, label: 'Editar foto', link: '/settings' }
       ]
     };
   }
@@ -44,7 +50,6 @@ export default {
     width: 75%;
     margin: 0 auto 20px;
     font-size: 18px;
-    cursor: pointer;
 
     &:last-of-type {
       margin-bottom: 0;
